@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCrafters Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="icon" href="./icon/Logo Codecrafters.png">
+</head>
+<body>
+    
+    <header class="header">
+
+        <div class="menu container">
+            <a href="index.html" class="logo">
+                <img src="./logo/logo.png" alt="Logo de la tienda">
+            </a>
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="./images/menu.png" class="menu-icono" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="seccion2.html">Servicios</a></li>
+                    <li><a href="seccion3.html"class="active">Productos</a></li>
+                    <li><a href="seccion4.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img src="./images/car.svg" id="img-carrito" alt="carrito">
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </header>
+
+        <aside class="sidebar">
+            <div class="categorias">
+                <h3>Categorías</h3>
+                <ul>
+                    <li><a href="#">Equipos y Notebooks</a></li>
+                    <li><a href="#">Procesadores</a></li>
+                    <li><a href="#">Mothers</a></li>
+                    <li><a href="#">Placas de Video</a></li>
+                    <li><a href="#">Memorias RAM</a></li>
+                    <li><a href="#">Almacenamiento</a></li>
+                    <li><a href="#">Gabinetes</a></li>
+                    <li><a href="#">Fuentes</a></li>
+                    <li><a href="#">Periféricos</a></li>
+                    <li><a href="#">Sillas Gamers</a></li>
+                    <li><a href="#">Consolas</a></li>
+                </ul>
+            </div>
+            <div class="filtros">
+                <h3>Filtros</h3>
+                <!-- Agrega filtros según sea necesario -->
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <!-- Contenido principal (lista de productos, etc.) -->
+        </main>
+
+        <footer class="footer">
+        
+            <div class="footer-content container">
+    
+                <div class="link">
+                    <h3>Nuestra Compañia</h3>
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Nuestros servicios</a></li>
+                        <li><a href="#">Condiciónes</a></li>
+                        <li><a href="#">Afiliate</a></li>
+                    </ul>
+            
+                </div>
+    
+                <div class="link">
+                    <h3>Consultas</h3>
+                    <ul>
+                        <li><a href="#">Compras</a></li>
+                        <li><a href="#">Envios</a></li>
+                        <li><a href="#">Pago</a></li>
+                    </ul>
+    
+                </div>
+    
+                <div class="link">
+                    <h3>Tienda e-sports</h3>
+                    <ul>
+                        <li><a href="#">Remeras</a></li>
+                        <li><a href="#">Camperas</a></li>
+                        <li><a href="#">Buzos</a></li>
+                    </ul>
+    
+                </div>
+    
+                <div class="link">
+                    <h3>Siguenos</h3>
+                    <div class="social-link">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+    
+                </div>
+    
+            </div>
+    
+        </footer>
+
+        <script src="script.js"></script>
+        </body>
+</html>
