@@ -115,7 +115,7 @@ ul {
 /* LARGE SIZE */
 @media(min-width: 700px) {
     body {
-        padding: 0 4em;
+        padding: 0 0;
     }
     .contact-wrapper {
         display: grid;
