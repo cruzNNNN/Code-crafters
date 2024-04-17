@@ -79,6 +79,15 @@ font-size: 2rem;
 color:#444;
 }
 
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.oferta-price {
+    color: #f00 !important;
+}
+
 .products-preview{
 position: fixed;
 top:0; left:0;

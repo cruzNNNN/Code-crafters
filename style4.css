@@ -7,12 +7,13 @@ text-decoration: none;
 transition: all .2s linear;
 }
 
-body {
-background: #F5f5f5;
-}
-
 .header {
     min-height: 0;
+}
+
+body {
+    width: 100%;
+    background: #F5f5f5;
 }
 
 .cuerpo {
@@ -92,6 +93,7 @@ ul {
     border: 0;
     text-transform: uppercase;
     padding: 1em;
+    cursor: pointer;
 }
 
 .contact-form form button:hover,
@@ -102,7 +104,7 @@ ul {
     outline: 0;
 }
 
-/* CONTACT INFO */
+/* info de contacto */
 .contact-info {
     background: #000;
 }
@@ -112,7 +114,7 @@ ul {
     margin: 0 0 1rem 0;
 }
 
-/* LARGE SIZE */
+/* tamaño grande */
 @media(min-width: 700px) {
     body {
         padding: 0 0;
