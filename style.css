@@ -454,14 +454,14 @@ img {
 }
 
 .login-form {
-    display: none; /* Lo ocultamos inicialmente */
-    position: fixed; /* Lo fijamos en la pantalla */
-    top: 50%; /* Lo posicionamos en la mitad vertical */
-    left: 50%; /* Lo posicionamos en la mitad horizontal */
-    transform: translate(-50%, -50%); /* Lo centramos */
-    max-width: 90%; /* Ancho máximo */
-    max-height: 90%; /* Altura máxima */
-    overflow-y: auto; /* Agregamos desplazamiento vertical si es necesario */
+    display: none; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    max-width: 90%; 
+    max-height: 90%; 
+    overflow-y: auto; 
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
@@ -471,7 +471,7 @@ img {
 
 .wrapper {
     position: fixed;
-    background: #00C3FF;
+    background: transparent;
     border: 2px solid rgba(255, 255, 255, .5);
     border-radius: 20px;
     backdrop-filter: blur(20px);
@@ -498,7 +498,7 @@ img {
     right: 0;
     width: 45px;
     height: 45px;
-    background: #162938;
+    background: #000000;
     font-size: 2em;
     color: #fff;
     display: flex;
@@ -511,7 +511,7 @@ img {
 
 .form-box h2{
     font-size: 2em;
-    color: #162938;
+    color: #000000;
     text-align: center;
 }
 
@@ -529,7 +529,7 @@ img {
     left: 5px;
     transform: translateY(-50%);
     font-size: 1em;
-    color: #162938;
+    color: #000000;
     font-weight: 500;
     pointer-events: none;
     transition: .5s;
@@ -556,13 +556,13 @@ top: -5px;
     position: absolute;
     right: 8px;
     font-size: 1.2em;
-    color: #162938;
+    color: #000000;
     line-height: 57px;
 }
 
 .remember-forgot {
     font-size: .9em;
-    color:#162938;
+    color:#000000;
     font-weight: 500;
     margin: -15px 0 15px;
     display: flex;
@@ -570,12 +570,12 @@ top: -5px;
 }
 
 .remember-forgot label input {
-    accent-color: #162938;
+    accent-color: #000000;
     margin-right: 3px;
 }
 
 .remember-forgot a{
-    color:#162938;
+    color:#000000;
     text-decoration: none;
     margin-left: 8px;
 }
@@ -604,14 +604,14 @@ top: -5px;
 
 .login-register{
     font-size: .9em;
-    color: #162938;
+    color: #000000;
     text-align: center;
     font-weight: 500;
     margin: 25px 0 10px;
 }
 
 .login-register p a {
-    color: #162938;
+    color: #000000;
     text-decoration: none;
     font-weight: 600;
 }
