@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stlyesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -197,6 +198,30 @@
             </div>
         </div>
     </section>
+
+    <div class="feedback-form">
+        <h2>¿Cómo fue tu experiencia?</h2>
+        <form id="feedback-form">
+            <div class="rating">
+                <label for="star5">Puntuación:</label>
+                <div class="stars">
+                    <input type="radio" id="star1" name="rating" value="1"><i class='bx bx-star' data-index="0"></i>
+                    <input type="radio" id="star2" name="rating" value="2"><i class='bx bx-star' data-index="1"></i>
+                    <input type="radio" id="star3" name="rating" value="3"><i class='bx bx-star' data-index="2"></i>
+                    <input type="radio" id="star4" name="rating" value="4"><i class='bx bx-star' data-index="3"></i>
+                    <input type="radio" id="star5" name="rating" value="5"><i class='bx bx-star' data-index="4"></i>
+                </div>
+            </div>
+            <div class="comment">
+                <label for="comment">Déjanos tu opinión:</label>
+                <textarea id="comment" name="comment"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Enviar</button>
+            <div class="error-message" style="display: none; color: red;">Debe seleccionar estrellas y dejar un comentario</div>
+        </form>
+        <div class="feedback-message" style="display: none;">Feedback recibido</div>
+    </div>
+
 
         <footer class="footer">
         
