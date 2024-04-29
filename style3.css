@@ -25,6 +25,7 @@ overflow-x: hidden;
     left: 50%; 
     transform: translateX(-50%); 
     z-index: 1; 
+    padding-top: 5px;
 }
 
 .search-container input[type="text"] {
@@ -38,11 +39,11 @@ overflow-x: hidden;
     padding: 8px 10px;
     position: absolute;
     border: 0;
-    top: 0;
+    top: 5px;
     bottom: 0;
     right: 0;
     margin: auto;
-    background-color: crimson;
+    background-color: blueviolet;
     cursor: pointer;
     border-radius: 0 5px 5px 0;
 }
@@ -53,14 +54,13 @@ overflow-x: hidden;
 }
 
 .search-container button:hover {
-    background-color: darkred;
-
+    background-color: rgb(204, 0, 255);
 }
 /* Estilos para el buscador en celulares */
 @media (max-width: 768px) {
     .search-container {
         position: absolute;
-        top: 18px; 
+        top: 12px; 
         left: 50%;
         transform: translateX(-50%);
         z-index: 1;
