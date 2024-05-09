@@ -75,7 +75,7 @@ let slides = document.querySelectorAll('.slide');
 
 let index = 0;
 let slideWidth = slides[0].clientWidth; // Cambiado de const a let
-
+// siguiente slider
 function nextSlide() {
 index++;
 if (index === slides.length) {
@@ -83,7 +83,7 @@ if (index === slides.length) {
 }
 updateSlidePosition();
 }
-
+// prev slider
 function prevSlide() {
     index--;
     if (index < 0) {
@@ -91,7 +91,7 @@ function prevSlide() {
     }
     updateSlidePosition();
 }
-
+//Actualizacion de la posicion del slider
 function updateSlidePosition() {
   const offset = -slideWidth * index;
 document.querySelector('.slides').style.transform = `translateX(${offset}px)`;
@@ -99,7 +99,7 @@ document.querySelector('.slides').style.transform = `translateX(${offset}px)`;
 
 // Función para calcular el ancho del slider cuando la ventana cambia de tamaño o de orientación
 function resizeSlider() {
-  slideWidth = slides[0].clientWidth; // No necesitas declarar slideWidth nuevamente, solo reasignar su valor
+slideWidth = slides[0].clientWidth;
 updateSlidePosition();
 }
 
@@ -109,7 +109,7 @@ resizeSlider(); // Ajusta el slider al cargar la página
 
 setInterval(nextSlide, 7000); // Cambia de slide cada 7 segundos
 
-// Obtenemos el botón de login, el formulario de login y el icono de cierre
+// Obtenemos todos los datos del login
 var btnLogin = document.getElementById("btn-login");
 var loginForm = document.getElementById("loginForm");
 var iconClose = document.querySelector('.icon-close');

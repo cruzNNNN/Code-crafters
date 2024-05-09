@@ -30,7 +30,7 @@ img {
     align-items: center;
     min-height: 80vh;
     padding: 60px 0;
-    background: linear-gradient(rgba(5,7,12,0.15), rgba(5,7,12,0.15)), url(./backgroundimage/6106991.jpg) center center;
+    background: linear-gradient(rgba(5,7,12,0.15), rgba(5,7,12,0.15)), url(./backgroundimage/6106991.webp) center center;
     background-size: cover;
 }
 
@@ -56,6 +56,7 @@ img {
     height: auto;
     max-height: 60px;
     padding-top: 10px;
+    filter: drop-shadow(1px 1px 1px black);
 }
 
 .menu .navbar ul li {
@@ -155,11 +156,11 @@ th, td {
 }
 
 .active {
-    color: #ff0000;
+    color: rgb(204, 0, 255);
 }
 
 .navbar ul li a.active {
-    color: #ff0000
+    color: rgb(204, 0, 255);
 }
 
 .btn-1 {
@@ -402,7 +403,7 @@ img {
 }
 
 .navbar ul li a:hover {
-    color: #ff0000;
+    color: rgb(204, 0, 255);
 }
 
 .social-link a {
@@ -745,4 +746,13 @@ top: -5px;
         text-align: center;
     }
 
+}
+
+.footer p{
+    color:#fff;
+    text-align: center;
+    font-size: x-large;
+    font-style: italic;
+    font-family: Roboto;
+    margin-top: 20px;
 }

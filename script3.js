@@ -32,6 +32,7 @@ const elementos1 = document.getElementById('lista-2');
 const lista = document.querySelector('#lista-carrito tbody');
 const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
 
+// Agrega los event listeners a los elementos de la pagina
 cargarEventListeners();
 
 function cargarEventListeners () {
@@ -41,7 +42,7 @@ function cargarEventListeners () {
     vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
 
 }
-
+// Funcion que se ejecuta al hacer click en el boton de carrito
 function comprarElemento(e) {
     e.preventDefault();
     if(e.target.classList.contains('agregar-carrito')) {
@@ -55,7 +56,7 @@ function comprarElemento(e) {
         });
     }
 }
-
+// Lee los datos del elemento seleccionado y los agrega al carrito. (data target y data id para diferenciar entre el script del index y este)
 function leerDatosElemento(elemento) {
     const infoElemento = {
         imagen: elemento.querySelector('img').src,
@@ -65,7 +66,7 @@ function leerDatosElemento(elemento) {
     }
     insertarCarrito(infoElemento);
 }
-
+// Inserta el elemento en el carrito de compras
 function insertarCarrito(elemento) {
     const row = document.createElement('tr');
     row.innerHTML = `
@@ -86,7 +87,7 @@ function insertarCarrito(elemento) {
     lista.appendChild(row);
 
 }
-
+// Elimina un elemento del carrito de compras 
 function eliminarElemento(e) {
     e.preventDefault();
     let elemento,
@@ -97,7 +98,7 @@ function eliminarElemento(e) {
         elementoId = elemento.querySelector('a').getAttribute('data-target');
     }
 }
-
+// Vaciar el carrito 
 function vaciarCarrito() {
     while(lista.firstChild) {
         lista.removeChild(lista.firstChild);
