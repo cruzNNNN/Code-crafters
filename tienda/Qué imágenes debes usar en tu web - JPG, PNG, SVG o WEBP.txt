@@ -1,0 +1,9 @@
+Pasa tus imágenes por herramientas como compressor.io o Tinypng para reducir al máximo su peso. 
+Incluso tienen APIs que las puedes integrar a tu backend para que todas las imágenes de tu web se compriman antes de ser subidas.
+
+
+Formatos de imagen WebP y AVIF: las claves para escoger el adecuado para tu web
+https://www.delefant.com/formatos-imagen-webp-avif/#:~:text=Este%20c%C3%B3dec%20es%20m%C3%A1s%20moderno,ganancia%20mayor%20con%20este%20formato.
+
+mejor formato de imagen para web es JPG
+
