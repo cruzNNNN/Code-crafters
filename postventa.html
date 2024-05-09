@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="postventa.css">
+    <title>PostVenta</title>
+</head>
+
+<body>
+    <section class="container mt-4" style="max-width: 400px" id="contenedor-formulario">
+
+        <div class="text-center text-white" id="titulo-formulario">
+            <h2 class="p-3">Complete el formulario a continuación y el equipo se contactará</h2>
+        </div>
+
+
+        <form action="#" method="post">
+            <label for="nombre">Nombre y Apellido *:</label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="Juan Perez" required><br><br>
+
+            <label for="dni_cuit">DNI o CUIT *:</label><br>
+            <input type="text" id="dni_cuit" name="dni_cuit" placeholder="11.111.111"><br><br>
+
+            <label for="telefono">Teléfono *:</label><br>
+            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono"><br><br>
+
+            <label for="domicilio">Domicilio *:</label><br>
+            <input type="text" id="domicilio" name="domicilio" placeholder="Av. San Martin 465"><br><br>
+
+            <label for="localidad">Localidad *:</label><br>
+            <input type="text" id="localidad" name="localidad" placeholder="Bransen"><br><br>
+
+            <label for="provincia">Provincia *:</label><br>
+            <input type="text" id="provincia" name="provincia" placeholder="La Pampa"><br><br>
+
+            <label for="email">Email *:</label><br>
+            <input type="email" id="email" name="email" placeholder="nombre@ejemplo.com" required><br><br>
+
+            <label for="fecha_compra">Fecha de Compra *:</label><br>
+            <input type="date" id="fecha_compra" name="fecha_compra"><br><br>
+
+            <label for="id_pedido">ID de Pedido:</label><br>
+            <input type="text" id="id_pedido" name="id_pedido"><br><br>
+
+
+            <label for="numero_factura">Nº de Factura *:</label><br>
+            <input type="text" id="numero_factura" name="numero_factura"><br><br>
+
+            <label for="tipo_factura">Tipo de Factura *:</label><br>
+            <input type="text" id="tipo_factura" name="tipo_factura"><br><br>
+
+
+            <label for="producto">Producto *:</label><br>
+            <input type="text" id="producto" name="producto" placeholder="Tipo de Producto"><br><br>
+
+            <label for="detalle_falla">Detalle de la Falla *:</label><br>
+            <textarea id="detalle_falla" name="detalle_falla" rows="4"></textarea><br><br>
+
+            <label for="imagen_problema">Imagen del problema *:</label><br>
+            <input type="file" id="imagen_problema" name="imagen_problema" accept="image/*"><br><br>
+
+            <input type="submit" value="Enviar">
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                crossorigin="anonymous"></script>
+
+        </form>
+    </section>
+</body>
+
+</html>

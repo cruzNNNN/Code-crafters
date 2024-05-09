@@ -55,7 +55,7 @@ margin: auto;
 }
 
 #card1 {
-    background-image: url(./img2/card1.jpg);
+    background-image: url(./img2/card1.webp);
     background-size: cover;
     background-position: center;
     transition: transform 0.3 ease;
@@ -66,7 +66,7 @@ margin: auto;
 }
 
 #card2 {
-    background-image: url(./img2/card2.jpg);
+    background-image: url(./img2/card2.webp);
     background-size: cover;
     background-position: center;
     transition: transform 0.3 ease;
@@ -77,7 +77,7 @@ margin: auto;
 }
 
 #card3 {
-    background-image: url(./img2/card3.jpg);
+    background-image: url(./img2/card3.webp);
     background-size: cover;
     background-position: center;
     transition: transform 0.3 ease;

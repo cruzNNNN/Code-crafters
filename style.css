@@ -30,7 +30,7 @@ img {
     align-items: center;
     min-height: 80vh;
     padding: 60px 0;
-    background: linear-gradient(rgba(5,7,12,0.15), rgba(5,7,12,0.15)), url(./backgroundimage/6106991.jpg) center center;
+    background: linear-gradient(rgba(5,7,12,0.15), rgba(5,7,12,0.15)), url(./backgroundimage/6106991.webp) center center;
     background-size: cover;
 }
 
@@ -746,4 +746,13 @@ top: -5px;
         text-align: center;
     }
 
+}
+
+.footer p{
+    color:#fff;
+    text-align: center;
+    font-size: x-large;
+    font-style: italic;
+    font-family: Roboto;
+    margin-top: 20px;
 }

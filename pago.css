@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.payment-method {
+    text-align: center;
+    margin: 10px;
+}
+
+.payment-method img {
+    width: 100px;
+    height: auto
+}
+
+.payment-method p {
+    margin: 20px;
+    font-size: xx-large;
+    text-align: center;
+}

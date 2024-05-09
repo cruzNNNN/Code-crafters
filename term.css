@@ -1,0 +1,27 @@
+body{
+    background-color:#fff;
+    font-family: roboto, sans-serif;
+    font-size: larger;
+    color:  #140f2c;
+    padding: 3% 6%;
+}
+
+div{
+    font-family:cursive;
+    font-size:medium;
+    color: #00A9FF;
+    padding-top: 2%;
+}
+
+strong{
+    font-family:roboto, sans-serif;
+    font-size:large;
+    color: #000;
+    padding-top: 2%;
+}
+
+p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    color: #000;
+}

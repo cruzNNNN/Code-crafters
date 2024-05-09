@@ -1,0 +1,10 @@
+login en todas las secciones
+hover de redes con cada color
+twitter cambiar por X
+arreglar imagenes medios de pago y que queden de manera horizontal
+quienes somos arreglar responsibilidad y estilizar
+hover subi tu cv postulate arreglar visual
+hacer responsive paginas de productos e sports
+validación por javascript
+validacion por html, css.
+letra de login cambiar color
