@@ -18,6 +18,61 @@ overflow-x: hidden;
     min-height: 0;
 }
 
+
+.search-container {
+    position: absolute;
+    top: 55px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 1; 
+    padding-top: 5px;
+}
+
+.search-container input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 30rem;
+}
+
+.search-container button {
+    padding: 8px 10px;
+    position: absolute;
+    border: 0;
+    top: 5px;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background-color: blueviolet;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.search-container button i {
+    font-size: 16px;
+    color: #fff;
+}
+
+.search-container button:hover {
+    background-color: rgb(204, 0, 255);
+}
+/* Estilos para el buscador en celulares */
+@media (max-width: 768px) {
+    .search-container {
+        position: absolute;
+        top: 12px; 
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+    .search-container input[type="text"] {
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 20rem;
+    }
+}
+
 body{
 background: #F5F5F5;
 }

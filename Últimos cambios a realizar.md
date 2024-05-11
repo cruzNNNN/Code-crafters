@@ -8,3 +8,8 @@ En la sección contacto existe un desbordamiento por parte de la navbar a difere
 
 
 Darle funcionalidad al footer (Opcional) ya que no tenemos redes pero podriamos agregar un html con información util para completar el 100% de la pagina.
+
+
+Modificaciones a la pagina de productos, agregar productos especificados dentro de el index (camperas, hardware, perifericos, etc) y sidebar con filter.
+
+Modificacion al sector "contacto"

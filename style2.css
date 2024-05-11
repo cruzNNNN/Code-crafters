@@ -45,51 +45,72 @@ margin: auto;
 .card {
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     margin: 0px 20px;
     padding: 20px 20px;
-    background: rgb(34,193,195);
     border-radius: 10px;
     cursor: pointer;
+    min-height: 350px;
 }
 
-.card:hover{
-    background-color: #00bbff;
-    transition: 0.4s ease;
+#card1 {
+    background-image: url(./img2/card1.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3 ease;
+}
+
+#card1:hover {
+    transform: scale(1.05);
+}
+
+#card2 {
+    background-image: url(./img2/card2.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3 ease;
+}
+
+#card2:hover {
+    transform: scale(1.05);
+}
+
+#card3 {
+    background-image: url(./img2/card3.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3 ease;
+}
+
+#card3:hover {
+    transform: scale(1.05);
 }
 
 .card .icon {
     font-size: 35px;
-    margin-bottom: 10px;
 }
 
 .card h2{
     font-size: 28px;
-    color: #ff0000;
+    color: #ffffff;
     margin-bottom: 20px;
-}
-
-.card p{
-    font-size: 17px;
-    margin-bottom: 30px;
-    line-height: 1.5;
-    color: #5e5e5e;
 }
 
 .serviciosboton{
     font-size: 15px;
     text-decoration: none;
     color: #fff;
-    background-color: #2c677c;
+    background-color: transparent;
     padding: 8px 12px;
     border-radius: 5px;
     letter-spacing: 1px;
+    align-self: center;
+    margin-top: auto;
 }
 
 .serviciosboton:hover {
-    background-color: #c94f4f;
+    background-color: blueviolet;
     transition: 0.4s ease;
 }
 
@@ -116,7 +137,7 @@ margin: auto;
 }
 
 .testimonios-item {
-    background-color:rgb(34,193,195);
+    background-color:#e7e7e7;
     padding: 30px;
     border-radius: 30px;
 }
@@ -155,7 +176,7 @@ margin: auto;
 
 .testimonios-item .rating {
     margin-top: 15px;
-    font-size: 14px;
+    font-size: 16px;
     color: hsl(36, 88%, 66%);
 }
 
@@ -168,7 +189,136 @@ margin: auto;
 .testimonios .swiper-pagination-bullet {
     height: 12px;
     width: 12px;
+    background-color: blueviolet;
 }
+
+.feedback-container{
+    position: relative;
+    max-width: 400px;
+    background: #111;
+    padding: 20px 30px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px auto;
+}
+.feedback-container .post{
+    display: none;
+}
+.feedback-container .text{
+    font-size: 25px;
+    color: #666;
+    font-weight: 500;
+}
+.feedback-container .edit{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+    cursor: pointer;
+}
+.feedback-container .edit:hover{
+    text-decoration: underline;
+}
+.feedback-container .star-widget input{
+    display: none;
+}
+.star-widget label{
+    font-size: 40px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+    color: #fd4;
+}
+input:checked ~ label{
+    color: #fd4;
+}
+input#rate-5:checked ~ label{
+    color: #fe7;
+    text-shadow: 0 0 20px #952;
+}
+#rate-1:checked ~ form header:before{
+    content: "Muy mala! ";
+}
+#rate-2:checked ~ form header:before{
+    content: "Es mala! ";
+}
+#rate-3:checked ~ form header:before{
+    content: "Esta bien! ";
+}
+#rate-4:checked ~ form header:before{
+    content: "Me gusto! ";
+}
+#rate-5:checked ~ form header:before{
+    content: "Me gusto mucho! ";
+}
+.feedback-container form{
+    display: none;
+    margin: 0 auto;
+    max-width: 400px;
+}
+input:checked ~ form{
+    display: block;
+}
+form header{
+    width: 100%;
+    font-size: 25px;
+    color: #fe7;
+    font-weight: 500;
+    margin: 5px 0 20px 0;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+form .textarea{
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #eee;
+    border: 1px solid #333;
+    background: #222;
+    padding: 10px;
+    font-size: 17px;
+    resize: none;
+}
+.textarea textarea:focus{
+    border-color: #444;
+}
+form .btn{
+    height: 45px;
+    width: 100%;
+    margin: 15px 0;
+}
+form .btn button{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #222;
+    color: #999;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form .btn button:hover{
+    background: #1b1b1b;
+}
+
 
 
 @media screen and (max-width: 940px){
@@ -181,5 +331,11 @@ margin: auto;
         width: 85%;
         display: flex;
         margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .star-widget label {
+        font-size: 30px; 
     }
 }

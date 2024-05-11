@@ -22,6 +22,7 @@ body {
     line-height: 1.6;
     font-family: 'Quicksand', sans-serif;
     padding: 0 1.5em;
+    background-image: url(./imgtc/desarrollo-de-videojuegos-sin-programacion.jpg);
 }
 
 .contenidocontacto { 
@@ -47,11 +48,12 @@ ul {
 }
 
 .contact-wrapper {
-    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+    box-shadow: 0 0 20px 0 rgba(190, 4, 4, 0.603);
 }
 
 .contact-wrapper > * {
-    padding: 1em;
+    padding: 1.5em;
+    border-radius: 8px;
 }
 
 .contact-form {
@@ -68,8 +70,8 @@ ul {
 }
 
 .contact-form form p {
-    margin: 0;
-    padding: 1em;
+    margin: 5px;
+    padding: 0.5em; /*modificado */
 }
 
 .contact-form form .block {
@@ -80,25 +82,27 @@ ul {
 .contact-form form input,
 .contact-form form textarea {
     width: 100%;
-    padding: .7em;
+    padding: .4em;
     border: none;
     background: none;
     outline: 0;
     color: #fff;
-    border-bottom: 1px solid blueviolet;
+    border-bottom: 1px solid rgb(151, 30, 0);
 }
 
 .contact-form form button {
-    background: blueviolet;
+    background: rgba(189, 20, 8, 0.692);
     border: 0;
     text-transform: uppercase;
     padding: 1em;
     cursor: pointer;
+    align-items: center; /*agregado*/
+    border-radius: 8px; /*agregado*/
 }
 
 .contact-form form button:hover,
 .contact-form form button:focus {
-    background: rgb(204, 0, 255);
+    background: rgb(255, 3, 3);
     color: #fff;
     transition: background-color 1s ease-out;
     outline: 0;
@@ -112,7 +116,7 @@ ul {
 .contact-info h4, .contact-info ul, .contact-info p {
     text-align: center;
     margin: 0 0 1rem 0;
-}
+ }
 
 /* tamaño grande */
 @media(min-width: 700px) {
@@ -121,7 +125,7 @@ ul {
     }
     .contact-wrapper {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 2fr; /*era 1fr mas*/
     }
     .contact-wrapper > * {
         padding: 2em;
@@ -132,3 +136,52 @@ ul {
         text-align: left;
     }
 }
+
+
+/*fecha de cuestionario*/
+.date {
+    -color: rgba(153, 1, 1, 0.945);
+    border: 1px solid var(--color);
+    font-size: 12px;
+    background: #000d;
+    color: #fff;
+    padding: 0.5em;
+  
+    &::-webkit-datetime-edit {
+      margin-left: 0.5em;
+    }
+  
+    &::-webkit-datetime-edit-fields-wrapper {
+      background:#181818;
+      border-radius: 1px;
+      padding:3px;
+    }
+  
+    &::-webkit-datetime-edit-text {
+      color:darkgrey
+    }
+  
+    &::-webkit-datetime-edit-day-field:focus,
+    &::-webkit-datetime-edit-month-field:focus,
+    &::-webkit-datetime-edit-year-field:focus {
+      background:rgb(8, 4, 4);
+    }
+  
+    &::-webkit-calendar-picker-indicator {
+      filter:invert(1);
+    }
+  }
+
+  /*agredado para la disponibilidad de turnos*/
+  .custom {
+    appearance: none;
+    width: fit-content;
+    padding: 0.5rem; /*2.5rem 0.5rem 2rem;*/
+    border-radius: 8px;
+    font-family: Jost, sans-serif;
+    font-size: 0.9em;
+    color: rgb(10, 3, 3);
+    border: 2.3px solid rgb(165, 142, 142);
+    background: whitesmoke center left 1px no-repeat;
+    background-size: 7px;
+  }
