@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Trabaja_con_nosotros.css">
+    <link rel="stylesheet" href="Trabaja_con_nosotros1.0.css">
+    <link rel="icon" href="./logo/logo.webp">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <title>Trabaja con nosotros</title>
+</head>
+
+
+
+
+<body>
+
+    <header class="header">
+
+        <div class="menu container">
+            <a href="index.html" class="logo">
+                <img src="./logo/logo.webp" alt="Logo de la tienda">
+            </a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="./images/menu.webp" class="menu-icono" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="seccion2.html">Servicios</a></li>
+                    <li><a href="seccion3.html">Productos</a></li>
+                    <li><a href="seccion4.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img src="./images/car.svg" id="img-carrito" alt="carrito">
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="cuerpo">
+        <div class="contenidocontacto">
+
+            <h1>Bolsa de trabajo de CodeCrafters</h1>
+
+            <h3 class>¡Sumate a nuestro equipo, te estamos esperando!</h3><br>
+
+            <div class="contact-wrapper animated bounceInUp">
+                <div class="contact-form">
+                    <h3>Datos Personales</h3>
+                    <form action="#">
+                        <p>
+                            <label>Nombre</label>
+                            <input type="text" name="fullname" required>
+                        </p>
+                        <p>
+                            <label>Apellido</label>
+                            <input type="text" name="lastname" required>
+                        </p>
+                        <p>
+                            <label>E-mail</label>
+                            <input type="email" name="email" required>
+                        </p>
+                        <p>
+                            <label>Celular</label>
+                            <input type="tel" name="phone" required>
+                        </p>
+                        <p>
+                            <label>D.N.I</label>
+                            <input type="tel" name="DNI" required>
+                        </p>
+                        <p>
+                            <label>Nacimiento</label>
+                            <input class="date" type="date" name="fecha" required>
+                        </p>
+                        <p>
+                            <label>Estudios</label>
+                            <input type="text" name="affair" required>
+                        </p>
+                    </form>
+
+                    <div class="contact-form">
+                        <h3>Domicilio</h3>
+                        <form action="#">
+                            <p>
+                                <label>Ciudad</label>
+                                <input type="text" name="ciudad" required>
+                            </p>
+                            <p>
+                                <label>Calle</label>
+                                <input type="text" name="calle" required>
+                            </p>
+                            <p>
+                                <label>Número</label>
+                                <input type="tel" name="Nro" required>
+                            </p>
+                            <p>
+                                <label>Dpto/Piso</label>
+                                <input type="tel" name="Dpto" required>
+                            </p>
+                            <p>
+                                <label>Codido postal</label>
+                                <input type="text" name="c.p" required>
+                            </p>
+                            <p>
+                                <label>Adjunta tu C.V</label>
+                                <input type="file" name="c.v" required>
+                            </p>
+                        </form>
+                    </div>
+
+                    <div class="contact-form">
+                        <h3>Disponibilidad Horaria</h3>
+                        <form action="#">
+                            <p>
+                                <label></label>
+                                <select class="custom">
+                                    <option value="1">Turno Mañana</option>
+                                    <option value="2" selected>Turno tarde</option>
+                                    <option value="3">Turno Noche</option>
+                                </select>
+                                <input type="text" name="ciudad" required>
+                            </p>
+
+                            <p class="block">
+                                <button>
+                                    Enviar
+                                </button>
+                            </p>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="footer-content container">
+
+            <div class="link">
+                <h3>Nuestra Compañia</h3>
+                <ul>
+                    <li><a href="quienessomos.html">Nosotros</a></li>
+                    <li><a href="seccion2.html">Nuestros servicios</a></li>
+                    <li><a href="privacy.html">Condiciónes</a></li>
+                    <li><a href="postulante.html">Afiliate</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Consultas</h3>
+                <ul>
+                    <li><a href="compras.html">Compras</a></li>
+                    <li><a href="envios.html">Envios</a></li>
+                    <li><a href="pagos.html">Pagos</a></li>
+                    <li><a href="term.html">Terminos</a></li>
+                    <li><a href="garantia.html">Garantía</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Tienda e-sports</h3>
+                <ul>
+                    <li><a href="remeras.html">Remeras</a></li>
+                    <li><a href="camperas.html">Buzos</a></li>
+                    <li><a href="gorras.html">Gorras</a></li>
+                    <li><a href="tazas.html">Tazas</a></li>
+                </ul>
+            </div>
+
+
+            <div class="link">
+                <ul>
+                    <li>
+                        <a href="Trabaja_con_nosotros.html">
+                            <h3>Trabaja con nosotros</h3>
+                        </a>
+                    </li>
+                </ul>
+                <p>
+                    <a>Si queres ser un CodeCrafter accedé <br> a nuestra bolsa de trabajo.<br>
+                        Tenemos puestos vacantes y vos <br> podes formar parte de nuestro gran staff.</a>
+                </p><br>
+                <h4>Que estas esperando!!</h4>
+
+            </div>
+
+
+            <div class="link">
+                <h3>Siguenos</h3>
+                <div class="social-link">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <button id="btn-login" class="btnLogin-popup">
+        <i class="fas fa-user"></i> Login
+    </button>
+
+</body>
+
+</html>

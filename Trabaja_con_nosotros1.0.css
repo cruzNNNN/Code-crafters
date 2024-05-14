@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+*{
+margin:0; padding:0;
+box-sizing: border-box;
+outline: none; border:none;
+text-decoration: none;
+transition: all .2s linear;
+}
+
+.header {
+    min-height: 0;
+}
+
+body {
+    width: 100%;
+    background: #F5f5f5;
+}
+
+.cuerpo {
+    background: #181818;
+    color: #fff;
+    line-height: 1.6;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 1.5em;
+    background-image: url(./imgtc/desarrollo-de-videojuegos-sin-programacion.jpg);
+}
+
+.contenidocontacto { 
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.logo {
+    text-align: center;
+    font-size: 3em;
+    color: white;
+}
+
+.logo span {
+    color: blueviolet;
+}
+
+.contact-wrapper {
+    box-shadow: 0 0 20px 0 rgba(190, 4, 4, 0.603);
+}
+
+.contact-wrapper > * {
+    padding: 1.5em;
+    border-radius: 8px;
+}
+
+.contact-form {
+    background: #222222;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form label {
+    display: block;
+}
+
+.contact-form form p {
+    margin: 5px;
+    padding: 0.5em; /*modificado */
+}
+
+.contact-form form .block {
+    grid-column: 1 / 3;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: .4em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid rgb(151, 30, 0);
+}
+
+.contact-form form button {
+    background: rgba(189, 20, 8, 0.692);
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+    cursor: pointer;
+    align-items: center; /*agregado*/
+    border-radius: 8px; /*agregado*/
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: rgb(255, 3, 3);
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+/* info de contacto */
+.contact-info {
+    background: #000;
+}
+
+.contact-info h4, .contact-info ul, .contact-info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+ }
+
+/* tamaño grande */
+@media(min-width: 700px) {
+    body {
+        padding: 0 0;
+    }
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr; /*era 1fr mas*/
+    }
+    .contact-wrapper > * {
+        padding: 2em;
+    }
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        text-align: left;
+    }
+}
+
+
+/*fecha de cuestionario*/
+.date {
+    -color: rgba(153, 1, 1, 0.945);
+    border: 1px solid var(--color);
+    font-size: 12px;
+    background: #000d;
+    color: #fff;
+    padding: 0.5em;
+  
+    &::-webkit-datetime-edit {
+      margin-left: 0.5em;
+    }
+  
+    &::-webkit-datetime-edit-fields-wrapper {
+      background:#181818;
+      border-radius: 1px;
+      padding:3px;
+    }
+  
+    &::-webkit-datetime-edit-text {
+      color:darkgrey
+    }
+  
+    &::-webkit-datetime-edit-day-field:focus,
+    &::-webkit-datetime-edit-month-field:focus,
+    &::-webkit-datetime-edit-year-field:focus {
+      background:rgb(8, 4, 4);
+    }
+  
+    &::-webkit-calendar-picker-indicator {
+      filter:invert(1);
+    }
+  }
+
+  /*agredado para la disponibilidad de turnos*/
+  .custom {
+    appearance: none;
+    width: fit-content;
+    padding: 0.5rem; /*2.5rem 0.5rem 2rem;*/
+    border-radius: 8px;
+    font-family: Jost, sans-serif;
+    font-size: 0.9em;
+    color: rgb(10, 3, 3);
+    border: 2.3px solid rgb(165, 142, 142);
+    background: whitesmoke center left 1px no-repeat;
+    background-size: 7px;
+  }

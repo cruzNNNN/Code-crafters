@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCrafters Store Productos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="icon" href="./logo/logo.webp">
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="menu container">
+            <a href="index.html" class="logo">
+                <img src="./logo/logo.webp" alt="Logo de la tienda">
+            </a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="./images/menu.webp" class="menu-icono" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="seccion2.html">Servicios</a></li>
+                    <li><a href="seccion3.html" class="active">Productos</a></li>
+                    <li><a href="seccion4.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="container">
+                <ul>
+                    <li><a href="remeras.html">Remeras</a></li>
+                    <li><a href="camperas.html">Buzos</a></li>
+                    <li><a href="gorras.html">Gorras</a></li>
+                    <li><a href="tazas.html">Tazas</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img src="./images/car.svg" id="img-carrito" alt="carrito">
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </header>
+    <footer class="footer">
+
+        <div class="footer-content container">
+
+            <div class="link">
+                <h3>Nuestra Compañia</h3>
+                <ul>
+                    <li><a href="quienessomos.html">Nosotros</a></li>
+                    <li><a href="seccion2.html">Nuestros servicios</a></li>
+                    <li><a href="privacy.html">Condiciónes</a></li>
+                    <li><a href="postulante.html">Afiliate</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Consultas</h3>
+                <ul>
+                    <li><a href="compras.html">Compras</a></li>
+                    <li><a href="envios.html">Envios</a></li>
+                    <li><a href="pagos.html">Pagos</a></li>
+                    <li><a href="term.html">Terminos</a></li>
+                    <li><a href="garantia.html">Garantía</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Tienda e-sports</h3>
+                <ul>
+                    <li><a href="remeras.html">Remeras</a></li>
+                    <li><a href="camperas.html">Buzos</a></li>
+                    <li><a href="gorras.html">Gorras</a></li>
+                    <li><a href="tazas.html">Tazas</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Siguenos</h3>
+                <div class="social-link">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+        <br>
+        <p>&copy; 2024 CodeCrafters. Todos los derechos reservados.</p>
+        <br>
+
+    </footer>
+
+    <button id="btn-login" class="btnLogin-popup">
+        <i class="fas fa-user"></i> Login
+    </button>
+
+    <div id="loginForm" class="login-form wrapper">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">
+                        Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> I Agree to terms & conditions</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
