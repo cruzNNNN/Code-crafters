@@ -114,6 +114,13 @@ ul {
     margin: 0 0 1rem 0;
 }
 
+/* Estilos específicos para dispositivos pequeños */
+@media (max-width: 768px) {
+    .login-form {
+        width: 90%; /* Reducimos el ancho en dispositivos pequeños */
+    }
+}
+
 /* tamaño grande */
 @media(min-width: 700px) {
     body {

@@ -1,9 +1,40 @@
-body{
-    background-color:#fff;
-    font-family: roboto, sans-serif;
-    font-size: larger;
-    color:  #140f2c;
-    padding: 0 9%;
+
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px; /* Ajusta el alto del header según sea necesario */
+    padding: 20px 0; /* Ajusta el padding según sea necesario */
+    background: linear-gradient(rgba(5, 7, 12, 0.15), rgba(5, 7, 12, 0.15)), url(./backgroundimage/6106991.webp) center center;
+    background-size: cover;
+}
+
+
+/* Estilos para el botón "Ir a Index" */
+.button-index {
+    background-color: #007bff; /* Color de fondo azul */
+    color: #fff; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Cambiar el color de fondo al pasar el cursor por encima */
+.button-index:hover {
+    background-color: #0056b3; /* Color de fondo azul más oscuro */
 }
 
 h1{
@@ -19,10 +50,12 @@ h2{
     font-size:large;
     color: #000;
     padding-top: 2%;
+    margin-left: 1vh;
 }
 
 p{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: medium;
     color: #000;
+    margin-left: 1vh;
 }
