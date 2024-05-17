@@ -1,13 +1,130 @@
-.gorras {
-    width: 20%; /* Ajusta el ancho de cada elemento según tu diseño */
-    margin: 10px; /* Espacio entre los elementos */
-    display: inline-block; /* Para mostrar los elementos en línea */
-    /* float: left; */ /* Alternativamente, puedes usar float para hacer que los elementos floten a la izquierda */
-}
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
 
-/* Para asegurarte de que no haya espacios entre los elementos */
-body {
-    font-family: Arial, sans-serif;
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px; /* Ajusta el alto del header según sea necesario */
+    padding: 20px 0; /* Ajusta el padding según sea necesario */
+    background: linear-gradient(rgba(5, 7, 12, 0.15), rgba(5, 7, 12, 0.15)), url(./backgroundimage/6106991.webp) center center;
+    background-size: cover;
+}
+
+/* Estilos para el botón "Ir a Index" */
+.button-index {
+    background-color: #007bff; /* Color de fondo azul */
+    color: #fff; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Cambiar el color de fondo al pasar el cursor por encima */
+.button-index:hover {
+    background-color: #0056b3; /* Color de fondo azul más oscuro */
+}
+
+
+.products {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.products h2 {
+    color: #111111;
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.product-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.product {
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 250px;
+    height: 280px;
+    margin-bottom: 20px;
+}
+
+.product h3 {
+    font-size: 20px;
+    color: #111111;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.product p, .precio {
+    font-size: 16px;
+    color:#111111;
+    margin-bottom: 15px;
+}
+
+.precio {
+    font-weight: 800;
+}
+
+.btn-2 {
+    display: inline-block;
+    padding: 7px 10px;
+    background-color: #bb00ff;
+    color: #FFFFFF;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+@media (max-width:991px) {
+
+    .products {
+        padding: 0 30px 30px 30px;
+    }
+
+    .products h2 {
+        margin-bottom: 30px;
+    }
+
+    .product-content {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .product img {
+        width: 200px;
+        height: 280px;
+    }
+}
+
+

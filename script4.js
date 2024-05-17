@@ -8,7 +8,7 @@ var registerBox = document.querySelector('.register');
 var registerLink = document.querySelector('.register-link');
 var loginLink = document.querySelector('.login-link');
 
-   // Función para mostrar el formulario de login y ocultar el de registro
+// Función para mostrar el formulario de login y ocultar el de registro
 function showLoginForm() {
     loginBox.style.display = 'block';
     registerBox.style.display = 'none';
@@ -22,45 +22,67 @@ function showRegisterForm() {
     registerLink.innerHTML = 'Register';
 }
 
-   // Agregamos un evento de click al botón de login
+// Función para mostrar mensajes de error
+function showError(message, element) {
+    element.innerHTML = message;
+    element.style.display = 'block';
+}
+
+// Agregamos un evento de click al botón de login
 btnLogin.addEventListener("click", function() {
-       // Mostramos el formulario de login al hacer clic en el botón
+    // Mostramos el formulario de login al hacer clic en el botón
     loginForm.classList.add("active-popup");
 });
 
-   // Agregamos un evento de click al icono de cierre
+// Función para alternar la visibilidad de la contraseña
+function togglePasswordVisibility(passwordField, toggleButton) {
+    var type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordField.setAttribute('type', type);
+    toggleButton.classList.toggle('active');
+}
+
+// Agrega eventos de clic a los iconos de "ojo" en ambos formularios
+document.getElementById('loginTogglePassword').addEventListener('click', function() {
+    togglePasswordVisibility(document.getElementById('loginPassword'), this);
+});
+
+document.getElementById('registerTogglePassword').addEventListener('click', function() {
+    togglePasswordVisibility(document.getElementById('registerPassword'), this);
+});
+
+// Agregamos un evento de click al icono de cierre
 iconClose.addEventListener('click', function() {
-       // Ocultamos el formulario de login al hacer clic en el icono de cierre
+    // Ocultamos el formulario de login al hacer clic en el icono de cierre
     loginForm.classList.remove("active-popup");
 });
 
-   // Agregamos un evento de click al enlace de registro
+// Agregamos un evento de click al enlace de registro
 registerLink.addEventListener('click', function(event) {
-       event.preventDefault(); // Evitamos que se ejecute el enlace
+    event.preventDefault(); // Evitamos que se ejecute el enlace
     
     if (registerBox.style.display !== 'block') {
-           // Mostramos el formulario de registro y ocultamos el de login
+        // Mostramos el formulario de registro y ocultamos el de login
         showRegisterForm();
     } else {
-           // Mostramos el formulario de login y ocultamos el de registro
+        // Mostramos el formulario de login y ocultamos el de registro
         showLoginForm();
     }
 });
 
-   // Agregamos un evento de click al enlace de login
+// Agregamos un evento de click al enlace de login
 loginLink.addEventListener('click', function(event) {
-       event.preventDefault(); // Evitamos que se ejecute el enlace
+    event.preventDefault(); // Evitamos que se ejecute el enlace
     
     if (loginBox.style.display !== 'block') {
-           // Mostramos el formulario de login y ocultamos el de registro
+        // Mostramos el formulario de login y ocultamos el de registro
         showLoginForm();
     } else {
-           // Mostramos el formulario de registro y ocultamos el de login
+        // Mostramos el formulario de registro y ocultamos el de login
         showRegisterForm();
     }
 });
 
-//Validador 
+// Validador 
 
 document.addEventListener('DOMContentLoaded', function() {
     const loginForm = document.getElementById('loginForm');
@@ -68,66 +90,131 @@ document.addEventListener('DOMContentLoaded', function() {
     const loginButton = document.getElementById('loginButton'); // Botón de envío del formulario de inicio de sesión
     const registerButton = document.getElementById('registerButton'); // Botón de envío del formulario de registro
 
- // Validación del formulario de inicio de sesión
-loginButton.addEventListener('click', function(event) {
-    const emailInput = loginForm.querySelector('input[type="email"]');
-    const passwordInput = loginForm.querySelector('input[type="password"]');
+        // Función para mostrar mensajes de error
+        function showError(message, element) {
+            element.innerHTML = message;
+            element.style.display = 'block';
+        }
 
-    // Verificar si el campo de correo electrónico está vacío
-    if (emailInput.value.trim() === '') {
-        event.preventDefault(); // Evitar el envío del formulario
-        alert('Please enter your email.');
-        return;
-    }
+// Función para restablecer los campos del formulario
+function resetFormFields(form) {
+    const inputs = form.querySelectorAll('input');
+    inputs.forEach(input => {
+        input.value = ''; // Limpiar el valor del campo
+        input.classList.remove('not-empty'); // Eliminar la clase 'not-empty' si está presente
+    });
 
-    // Verificar si el campo de contraseña está vacío
-    if (passwordInput.value.trim() === '') {
-        event.preventDefault(); // Evitar el envío del formulario
-        alert('Please enter your password.');
-        return;
-    }
+    //Ocultar los mensajes de error del formulario
+    const errorMessages = form.querySelectorAll('.error-message');
+    errorMessages.forEach(errorMessage => {
+        errorMessage.innerHTML = ''; //limpiar el contenido del mensaje error
+        errorMessage.style.display = 'none'; //ocultar el mensaje de error
+    });
+}
 
-    // Si todos los campos están completos, remueve la clase activepopup
-    loginForm.classList.remove('activepopup');
+    // Validación del formulario de inicio de sesión
+    loginButton.addEventListener('click', function(event) {
+        const emailInput = loginForm.querySelector('input[type="email"]');
+        const passwordInput = loginForm.querySelector('input[type="password"]');
+        const emailValue = emailInput.value.trim();
+        
+
+        // Verificar si el campo de correo electrónico está vacío
+        if (emailValue === '') {
+            event.preventDefault(); // Evitar el envío del formulario
+            showError('Please enter your email.', document.getElementById('loginErrorMessage'));
+            return false;
+        }
+
+        // Verificar si el campo de correo electrónico tiene un formato válido
+        if (!isValidEmail(emailValue)) {
+            event.preventDefault(); // Evitar el envío del formulario
+            showError('Invalid email format.', document.getElementById('loginErrorMessage'));
+            return false;
+        }
+
+        // Verificar si el campo de contraseña está vacío
+        if (passwordInput.value.trim() === '') {
+            event.preventDefault(); // Evitar el envío del formulario
+            showError('Please enter your password.', document.getElementById('loginErrorMessage'));
+            return false;
+} 
+        // Si todos los campos están completos, remueve la clase activepopup
+        loginForm.classList.remove('active-popup');
+
+        //Restablecer los campos del formulario
+        resetFormFields(loginForm);
+    });
+
+    // Validación del formulario de registro
+    registerButton.addEventListener('click', function(event) {
+        const usernameInput = registerForm.querySelector('input[type="text"]');
+        const emailInput = registerForm.querySelector('input[type="email"]');
+        const passwordInput = registerForm.querySelector('input[type="password"]');
+        const emailValue = emailInput.value.trim();
+        const agreeCheckbox = registerForm.querySelector('input[type="checkbox"]');
+
+        // Verificar si el campo de nombre de usuario está vacío
+        if (usernameInput.value.trim() === '') {
+            event.preventDefault(); // Evitar el envío del formulario
+        showError('Please enter your username.', document.getElementById('registerErrorMessage'));
+        return false;
+        }
+
+        // Verificar si el campo de correo electrónico está vacío
+        if (emailValue === '') {
+            event.preventDefault(); // Evitar el envío del formulario
+        showError('Please enter your email.', document.getElementById('registerErrorMessage'));
+        return false;
+        }
+
+        // Verificar si el campo de correo electrónico tiene un formato válido
+        if (!isValidEmail(emailValue)) {
+            event.preventDefault(); // Evitar el envío del formulario
+        showError('Invalid email format.', document.getElementById('registerErrorMessage'));
+        return false;
+        }
+
+        // Verificar si el campo de contraseña está vacío
+        if (passwordInput.value.trim() === '') {
+            event.preventDefault(); // Evitar el envío del formulario
+        showError('Please enter your password.', document.getElementById('registerErrorMessage'));
+        return false;
+        }
+
+        // Verificar si el checkbox de "I Agree to terms & conditions" está marcado
+        if (!agreeCheckbox.checked) {
+            event.preventDefault(); // Evitar el envío del formulario
+        showError('Please agree to terms & conditions.', document.getElementById('registerErrorMessage'));
+        return false;
+        }
+
+        // Si todos los campos están completos, remueve la clase activepopup
+        loginForm.classList.remove('active-popup');
+
+        //Restablecer los campos del formulario
+        resetFormFields(registerForm);
+    });
 });
 
+// Agregar eventos de entrada para controlar la posición de las etiquetas
+function addInputEvents(input) {
+    input.addEventListener('input', function() {
+        if (input.value.trim() !== '') {
+            input.classList.add('not-empty');
+        } else {
+            input.classList.remove('not-empty');
+        }
+    });
+}
 
-// Validación del formulario de registro
-registerButton.addEventListener('click', function(event) {
-    const usernameInput = registerForm.querySelector('input[type="text"]');
-    const emailInput = registerForm.querySelector('input[type="email"]');
-    const passwordInput = registerForm.querySelector('input[type="password"]');
-    const agreeCheckbox = registerForm.querySelector('input[type="checkbox"]');
+const emailInputs = document.querySelectorAll('input[type="email"]');
+emailInputs.forEach(addInputEvents);
 
-    // Verificar si el campo de nombre de usuario está vacío
-    if (usernameInput.value.trim() === '') {
-        event.preventDefault(); // Evitar el envío del formulario
-        alert('Please enter your username.');
-        return;
-    }
+const passwordInputs = document.querySelectorAll('input[type="password"]');
+passwordInputs.forEach(addInputEvents);
 
-    // Verificar si el campo de correo electrónico está vacío
-    if (emailInput.value.trim() === '') {
-        event.preventDefault(); // Evitar el envío del formulario
-        alert('Please enter your email.');
-        return;
-    }
-
-    // Verificar si el campo de contraseña está vacío
-    if (passwordInput.value.trim() === '') {
-        event.preventDefault(); // Evitar el envío del formulario
-        alert('Please enter your password.');
-        return;
-    }
-
-    // Verificar si el checkbox de "I Agree to terms & conditions" está marcado
-    if (!agreeCheckbox.checked) {
-        event.preventDefault(); // Evitar el envío del formulario
-        alert('Please agree to terms & conditions.');
-        return;
-    }
-
-// Si todos los campos están completos, remueve la clase activepopup
-registerForm.classList.remove('activepopup');
-});
-});
+// Función para validar el formato de correo electrónico
+function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}

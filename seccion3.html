@@ -487,7 +487,7 @@
                     <li><a href="quienessomos.html">Nosotros</a></li>
                     <li><a href="seccion2.html">Nuestros servicios</a></li>
                     <li><a href="privacy.html">Condiciónes</a></li>
-                    <li><a href="postulante.html">Afiliate</a></li>
+                    <li><a href="trabaja_con_nosotros.html">Afiliate</a></li>
                 </ul>
             </div>
 
@@ -526,7 +526,74 @@
 
     </footer>
 
+    <button id="btn-login" class="btnLogin-popup">
+        <i class="fas fa-user"></i> Login
+    </button>
+
+    <div id="loginForm" class="login-form wrapper">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="error-message" id="loginErrorMessage"></div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" id="loginPassword" required>
+                    <span class="toggle-password icon" id="loginTogglePassword"><ion-icon name="eye"></ion-icon>
+                    </span>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">
+                        Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn" id="loginButton">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+        <div id="registerForm" class="form-box register">
+            <h2>Registration</h2>
+            <form action="#">
+                <div class="error-message" id="registerErrorMessage"></div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" id="registerPassword" required>
+                    <span class="toggle-password icon" id="registerTogglePassword"><ion-icon name="eye"></ion-icon>
+                    </span>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> I Agree to terms & conditions</label>
+                </div>
+                <button type="submit" class="btn" id="registerButton">Register</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script src="script3.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

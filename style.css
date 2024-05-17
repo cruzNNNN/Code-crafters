@@ -446,7 +446,8 @@ img {
     z-index: 9999;
     position: fixed;
     bottom: 2%; 
-    right: 2%; 
+    right: 2%;
+    transition: .2s linear;
 }
 
 .btnLogin-popup:hover {
@@ -516,6 +517,18 @@ img {
     text-align: center;
 }
 
+.error-message {
+    display: none; 
+    color: #ff0000; 
+    background-color: transparent; 
+    border: 1px solid #ff0000; 
+    border-radius: 5px; 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    text-align: center; 
+    font-size: 0.9em; 
+}
+
 .input-box {
     position: relative;
     width: 100%;
@@ -536,21 +549,24 @@ img {
     transition: .5s;
 }
 
-.input-box input:focus~label,
-.input-box input:valid~label {
-top: -5px;
+
+.input-box input.not-empty ~ label,
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -5px;
 }
 
+
 .input-box input {
-    width: 100%;
+    width: calc(100% - 45px);
     height: 100%;
     background: transparent;
     border: none;
     outline: none;
     font-size: 1em;
-    color: #162938;
+    color: #000000;
     font-weight: 600;
-    padding: 0 35px 0 5px;
+    padding: 0 35px 0 45px;
 }
 
 .input-box .icon {
@@ -559,6 +575,20 @@ top: -5px;
     font-size: 1.2em;
     color: #000000;
     line-height: 57px;
+}
+
+.input-box .toggle-password {
+    position: absolute;
+    right: 45px;
+    font-size: 1.2em;
+    color: #000000;
+    line-height: 57px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.input-box .toggle-password.active {
+    color: #ffffff;
 }
 
 .remember-forgot {
