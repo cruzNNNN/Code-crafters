@@ -69,9 +69,6 @@ function vaciarCarrito() {
     }
     return false;
 }
-
-
-
 // Slider automatico
 let slider = document.querySelector('.slider');
 let slides = document.querySelectorAll('.slide');
@@ -172,76 +169,4 @@ loginLink.addEventListener('click', function(event) {
         // Mostramos el formulario de registro y ocultamos el de login
         showRegisterForm();
     }
-});
-
-//Validador 
-
-document.addEventListener('DOMContentLoaded', function() {
-    const loginForm = document.getElementById('loginForm');
-    const registerForm = document.getElementById('registerForm'); // Selecciona el formulario de registro por su ID
-    const loginButton = document.getElementById('loginButton'); // Botón de envío del formulario de inicio de sesión
-    const registerButton = document.getElementById('registerButton'); // Botón de envío del formulario de registro
-
- // Validación del formulario de inicio de sesión
-loginButton.addEventListener('click', function(event) {
-    const emailInput = loginForm.querySelector('input[type="email"]');
-    const passwordInput = loginForm.querySelector('input[type="password"]');
-
-    // Verificar si el campo de correo electrónico está vacío
-    if (emailInput.value.trim() === '') {
-        event.preventDefault(); // Evitar el envío del formulario
-        alert('Please enter your email.');
-        return;
-    }
-
-    // Verificar si el campo de contraseña está vacío
-    if (passwordInput.value.trim() === '') {
-        event.preventDefault(); // Evitar el envío del formulario
-        alert('Please enter your password.');
-        return;
-    }
-
-    // Si todos los campos están completos, remueve la clase activepopup
-    loginForm.classList.remove('activepopup');
-});
-
-
-// Validación del formulario de registro
-registerButton.addEventListener('click', function(event) {
-    const usernameInput = registerForm.querySelector('input[type="text"]');
-    const emailInput = registerForm.querySelector('input[type="email"]');
-    const passwordInput = registerForm.querySelector('input[type="password"]');
-    const agreeCheckbox = registerForm.querySelector('input[type="checkbox"]');
-
-    // Verificar si el campo de nombre de usuario está vacío
-    if (usernameInput.value.trim() === '') {
-        event.preventDefault(); // Evitar el envío del formulario
-        alert('Please enter your username.');
-        return;
-    }
-
-    // Verificar si el campo de correo electrónico está vacío
-    if (emailInput.value.trim() === '') {
-        event.preventDefault(); // Evitar el envío del formulario
-        alert('Please enter your email.');
-        return;
-    }
-
-    // Verificar si el campo de contraseña está vacío
-    if (passwordInput.value.trim() === '') {
-        event.preventDefault(); // Evitar el envío del formulario
-        alert('Please enter your password.');
-        return;
-    }
-
-    // Verificar si el checkbox de "I Agree to terms & conditions" está marcado
-    if (!agreeCheckbox.checked) {
-        event.preventDefault(); // Evitar el envío del formulario
-        alert('Please agree to terms & conditions.');
-        return;
-    }
-
-// Si todos los campos están completos, remueve la clase activepopup
-registerForm.classList.remove('activepopup');
-});
 });
